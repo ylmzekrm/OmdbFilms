@@ -1,0 +1,74 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_space_5"
+    app:elevation="2dp"
+    app:cardPreventCornerOverlap="false"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:transitionName="poster"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:padding="@dimen/dimen_space_5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:fontFamily="@font/montserrat_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_space_5"
+                android:textSize="16sp"
+                android:text="Movie"
+                android:gravity="start|center_vertical"
+                android:maxLines="4" />
+
+            <TextView
+                android:id="@+id/movie_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_space_5"
+                android:text="action"
+                android:textSize="14sp"
+                android:gravity="start|center_vertical"
+                android:fontFamily="@font/montserrat_regular"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/movie_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_space_5"
+                android:fontFamily="@font/tomorrowregular"
+                android:text="2022"
+                android:textSize="14sp"
+                android:gravity="start|center_vertical"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

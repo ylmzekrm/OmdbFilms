@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/main_collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary">
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                android:transitionName="poster"
+                app:layout_collapseMode="parallax"
+                tools:ignore="ContentDescription" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:layout_alignBottom="@+id/img"
+                android:background="@drawable/ic_background"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_space_15"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_space_5"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="100dp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:textSize="18sp"
+                  android:gravity="start"
+                  android:textColor="@color/peru"
+                  android:text="@string/title" />
+              <TextView
+                  android:layout_width="5dp"
+                  android:layout_height="match_parent"
+                  android:gravity="start"
+                  android:layout_marginStart="@dimen/dimen_space_5"
+                  android:layout_marginEnd="@dimen/dimen_space_5"
+                  android:text="@string/dot"/>
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:gravity="start"
+                  android:id="@+id/title" />
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_space_5"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="100dp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:textSize="18sp"
+                  android:gravity="start"
+                  android:textColor="@color/peru"
+                  android:text="@string/released" />
+              <TextView
+                  android:layout_width="5dp"
+                  android:layout_height="match_parent"
+                  android:gravity="start"
+                  android:layout_marginStart="@dimen/dimen_space_5"
+                  android:layout_marginEnd="@dimen/dimen_space_5"
+                  android:text="@string/dot"/>
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:gravity="start"
+                  android:id="@+id/released" />
+
+          </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_space_5"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="100dp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:textSize="18sp"
+                  android:gravity="start"
+                  android:textColor="@color/peru"
+                  android:text="@string/runtime" />
+              <TextView
+                  android:layout_width="5dp"
+                  android:layout_height="match_parent"
+                  android:gravity="start"
+                  android:layout_marginStart="@dimen/dimen_space_5"
+                  android:layout_marginEnd="@dimen/dimen_space_5"
+                  android:text="@string/dot"/>
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:gravity="start"
+                  android:id="@+id/runtime" />
+
+          </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_space_5"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="100dp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:textSize="18sp"
+                  android:gravity="start"
+                  android:textColor="@color/peru"
+                  android:text="@string/director" />
+              <TextView
+                  android:layout_width="5dp"
+                  android:layout_height="match_parent"
+                  android:gravity="start"
+                  android:layout_marginStart="@dimen/dimen_space_5"
+                  android:layout_marginEnd="@dimen/dimen_space_5"
+                  android:text="@string/dot"/>
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:gravity="start"
+                  android:id="@+id/director" />
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_space_5"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="100dp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:textSize="18sp"
+                  android:gravity="start"
+                  android:textColor="@color/peru"
+                  android:text="@string/genre" />
+              <TextView
+                  android:layout_width="5dp"
+                  android:layout_height="match_parent"
+                  android:gravity="start"
+                  android:layout_marginStart="@dimen/dimen_space_5"
+                  android:layout_marginEnd="@dimen/dimen_space_5"
+                  android:text="@string/dot"/>
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:gravity="start"
+                  android:id="@+id/genre" />
+
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_space_5"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="100dp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:textSize="18sp"
+                  android:gravity="start"
+                  android:textColor="@color/peru"
+                  android:text="@string/writer" />
+              <TextView
+                  android:layout_width="5dp"
+                  android:layout_height="match_parent"
+                  android:gravity="start"
+                  android:layout_marginStart="@dimen/dimen_space_5"
+                  android:layout_marginEnd="@dimen/dimen_space_5"
+                  android:text="@string/dot"/>
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:gravity="start"
+                  android:id="@+id/writers" />
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_space_5"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="100dp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:textSize="18sp"
+                  android:gravity="start"
+                  android:textColor="@color/peru"
+                  android:text="@string/actors" />
+              <TextView
+                  android:layout_width="5dp"
+                  android:layout_height="match_parent"
+                  android:gravity="start"
+                  android:layout_marginStart="@dimen/dimen_space_5"
+                  android:layout_marginEnd="@dimen/dimen_space_5"
+                  android:text="@string/dot"/>
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:gravity="start"
+                  android:id="@+id/actors" />
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_space_5"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="100dp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:textSize="18sp"
+                  android:gravity="start"
+                  android:textColor="@color/peru"
+                  android:text="@string/plot" />
+              <TextView
+                  android:layout_width="5dp"
+                  android:layout_height="match_parent"
+                  android:gravity="start"
+                  android:layout_marginStart="@dimen/dimen_space_5"
+                  android:layout_marginEnd="@dimen/dimen_space_5"
+                  android:text="@string/dot"/>
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:gravity="start"
+                  android:id="@+id/plot" />
+
+          </LinearLayout>
+      </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

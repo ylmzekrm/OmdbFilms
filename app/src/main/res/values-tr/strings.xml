@@ -1,0 +1,17 @@
+<resources>
+    <string name="search_hint">Search by movie title</string>
+    <string name="search_type">movie</string>
+    <string name="title_not_found">The movie title you entered was not found</string>
+    <string name="title_empty">Please enter a movie title</string>
+    <string name="network_not_available">Network not available! Please connect to the Internet.</string>
+    <string name="title">Title</string>
+    <string name="released">Released</string>
+    <string name="runtime">Runtime</string>
+    <string name="director">Director</string>
+    <string name="genre">Genre</string>
+    <string name="writer">Writer(s)</string>
+    <string name="actors">Actors</string>
+    <string name="plot">Plot</string>
+    <string name="error_occurred">Hata oluştu</string>
+    <string name="progress_movies">Filmler yükleniyor</string>
+</resources>
